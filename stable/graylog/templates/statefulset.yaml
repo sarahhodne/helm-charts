@@ -120,6 +120,7 @@ spec:
             - name: {{ $key }}
               value: {{ $value | quote }}
             {{- end }}
+{{ toYaml .Values.graylog.rawEnv | indent 12 }}
           securityContext:
             privileged: {{ .Values.graylog.privileged }}
           ports:

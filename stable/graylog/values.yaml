@@ -55,6 +55,17 @@ graylog:
   ##
   env: {}
 
+  ## Additional "raw" environment variables to be added to Graylog pods
+  ##
+  ## This uses the format used in Kubernetes manifests, allowing you to use the
+  ## downward API or secrets.
+  rawEnv: {}
+    # - name: SECRET_PASSWORD
+    #   valueFrom:
+    #     secretKeyRef:
+    #       name: password-secret
+    #       key: secret-password
+
   ## Run as privileged container
   ##
   privileged: false
